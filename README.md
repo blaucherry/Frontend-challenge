@@ -1,4 +1,4 @@
-<h1 align="center">Sngular × BBVA — Frontend Trainee 💙</h1>
+<h1 align="center">Frontend Challenge 💙</h1>
 <p align="center">Aplicación minimal para calcular una serie numérica con validación clara y respuesta inmediata.</p>
 
 ---
