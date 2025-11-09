@@ -1,4 +1,4 @@
-<h1 align="center">Frontend Challenge 💙</h1>
+<h1 align="center">Calculadora de Serie Compuesta  💙</h1>
 <p align="center">Aplicación minimal para calcular una serie numérica con validación clara y respuesta inmediata.</p>
 
 ---
@@ -33,18 +33,19 @@ serie(n) = fibonacci(n+1) − 2·triangular(n) + primo(n+1)
 ## Tabla oráculo (n = 0..9) 🔷
 Complete la tabla y utilícela como referencia en pruebas.
 
-| n | fibonacci(n+1) | triangular(n) | primo(n+1) | **serie(n)** |
-|---:|---------------:|--------------:|-----------:|-------------:|
-| 0 |                 |               |            |              |
-| 1 |                 |               |            |              |
-| 2 |                 |               |            |              |
-| 3 |                 |               |            |              |
-| 4 |                 |               |            |              |
-| 5 |                 |               |            |              |
-| 6 |                 |               |            |              |
-| 7 |                 |               |            |              |
-| 8 |                 |               |            |              |
-| 9 |                 |               |            |              |
+| n | fibonacci(n+1) | triangular(n) | primo(n+1) | **serie(n)** = f(n+1) − 2·t(n) + p(n+1) |
+|---:|---------------:|--------------:|-----------:|----------------------------------------:|
+| 0 | 1  | 0  | 2  | **3**  |
+| 1 | 1  | 1  | 3  | **2**  |
+| 2 | 2  | 3  | 5  | **1**  |
+| 3 | 3  | 6  | 7  | **−2** |
+| 4 | 5  | 10 | 11 | **−4** |
+| 5 | 8  | 15 | 13 | **−9** |
+| 6 | 13 | 21 | 17 | **−12**|
+| 7 | 21 | 28 | 19 | **−16**|
+| 8 | 34 | 36 | 23 | **−15**|
+| 9 | 55 | 45 | 29 | **−6** |
+
 
 ## Alcance 📘
 - No persiste datos ni realiza llamadas externas.  
