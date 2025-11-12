@@ -16,10 +16,9 @@ export function useSeries() {
 
       
       const s = String(raw).trim()
-      const onlyDigits = /^\d+$/.test(s)           
-      if (!onlyDigits) throw new Error('Ingresa solo enteros positivos')
-      const n = parseInt(s, 10)
-      if (!Number.isInteger(n) || n <= 0) throw new Error('Ingresa un entero mayor que 0')
+      const isInteger = /^-?\d+$/.test(s)
+        if (!isInteger) throw new Error('Numero no válido: debe ser un entero')
+    const n = parseInt(s, 10)
 
       setStatus('loading')
 
