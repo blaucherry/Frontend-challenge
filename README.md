@@ -28,35 +28,37 @@ Donde:
 
 Sigue estos pasos para instalar el proyecto en cualquier máquina:
 
-### 1. Clonar el repositorio
+1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/blaucherry/Frontend-challenge.git
 cd Frontend-challenge
+
 2. Verificar que tienes Node.js y npm instalados
 Este proyecto requiere:
 
 Node.js ≥ 18
-
 npm ≥ 9
 
 Verifica tu instalación:
 
-
 node -v
 npm -v
+
 Si no los tienes, puedes descargarlos desde 👉 https://nodejs.org
 
 3. Instalar dependencias
 
 npm install
+
+
 4. Ejecutar el proyecto localmente
 
 npm start
 Esto abrirá automáticamente la aplicación en tu navegador:
 
-
 http://localhost:3000
+
 5. Ejecutar pruebas unitarias
 
 npm test
