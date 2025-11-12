@@ -7,8 +7,6 @@ export default function App() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.line} />
-
       <header style={styles.header}>
         <h1 style={styles.title}>Calculadora de Serie Compuesta</h1>
         <p style={styles.subtitle}>
@@ -16,16 +14,20 @@ export default function App() {
         </p>
       </header>
 
+      {/* Franja debajo del encabezado */}
+      <div style={styles.line} />
+
       <main style={styles.main}>
         <SeriesForm onSubmit={compute} />
         <SeriesResult status={status} result={result} error={error} />
       </main>
 
+      {/* Franja inferior */}
       <div style={styles.line} />
 
       <footer style={styles.footer}>
         <img
-          src="/cinnamoroll.png" // Asegúrate que este archivo esté en la carpeta public/
+          src="/cinnamoroll.png"
           alt="Cinnamoroll"
           style={styles.footerImg}
         />
@@ -46,7 +48,7 @@ const styles = {
     justifyContent: 'space-between'
   },
   header: {
-    marginBottom: '20px'
+    marginBottom: '10px'
   },
   title: {
     fontSize: '26px',
@@ -58,17 +60,17 @@ const styles = {
     fontSize: '16px',
     color: '#1c3f5f'
   },
+  line: {
+    height: '5px',
+    backgroundColor: '#a3ccf5',
+    margin: '14px 0',
+    borderRadius: '2px'
+  },
   main: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: '20px'
-  },
-  line: {
-    height: '5px',
-    backgroundColor: '#a3ccf5',
-    margin: '10px 0',
-    borderRadius: '2px'
   },
   footer: {
     textAlign: 'center',
