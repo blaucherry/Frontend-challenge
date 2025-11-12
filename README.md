@@ -26,43 +26,30 @@ Donde:
 
 ## 📦 Instalación y ejecución del proyecto
 
-Sigue estos pasos para instalar el proyecto en cualquier máquina:
-
-1. Clonar el repositorio
-
 ```bash
+# Clona el repositorio
 git clone https://github.com/blaucherry/Frontend-challenge.git
 cd Frontend-challenge
 
-2. Verificar que tienes Node.js y npm instalados
-Este proyecto requiere:
-
-Node.js ≥ 18
-npm ≥ 9
-
-Verifica tu instalación:
-
+# Verifica que tienes Node.js y npm instalados
+# (Este proyecto requiere Node.js >= 18 y npm >= 9)
 node -v
 npm -v
 
-Si no los tienes, puedes descargarlos desde 👉 https://nodejs.org
+# Si no los tienes, instálalos desde: https://nodejs.org
 
-3. Instalar dependencias
-
+# Instala las dependencias del proyecto
 npm install
 
-
-4. Ejecutar el proyecto localmente
-
+# Ejecuta la aplicación en modo desarrollo
 npm start
-Esto abrirá automáticamente la aplicación en tu navegador:
 
-http://localhost:3000
+# Abre en tu navegador:
+# http://localhost:3000
 
-5. Ejecutar pruebas unitarias
-
+# (Opcional) Ejecuta las pruebas unitarias
 npm test
-Esto ejecutará las pruebas de la clase SeriesCalculator usando Jest.
+```
 
 🧠 Estructura del proyecto
 
