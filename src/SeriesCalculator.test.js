@@ -1,6 +1,4 @@
-// src/test/SeriesCalculator.test.js
-
-import SeriesCalculator from '../core/series/SeriesCalculator'
+import SeriesCalculator from './core/series/SeriesCalculator'
 
 describe('SeriesCalculator', () => {
   const calculator = new SeriesCalculator()
@@ -15,13 +13,12 @@ describe('SeriesCalculator', () => {
     { n: 6, expected: -12 },
     { n: 7, expected: -16 },
     { n: 8, expected: -15 },
-    { n: 9, expected: -6 }
+    { n: 9, expected: -6 },
   ]
 
   testCases.forEach(({ n, expected }) => {
     test(`serie(${n}) should return ${expected}`, () => {
-      const result = calculator.calculate(n)
-      expect(result).toBe(expected)
+      expect(calculator.calculate(n)).toBe(expected)
     })
   })
 })
