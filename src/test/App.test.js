@@ -1,7 +1,11 @@
-import { render, screen } from '@testing-library/react'
+
+import { render, screen, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
+
 import App from '../App'
+
+afterEach(cleanup)
 
 test('renderiza el título principal', () => {
   render(<App />)
