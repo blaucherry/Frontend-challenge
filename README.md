@@ -8,7 +8,7 @@ serie(n) = F(n+1) - 2·T(n) + P(n+1)
 
 Donde:
 - `F(n+1)` es el término (n+1) de la **sucesión de Fibonacci**
-- `T(n)` es el término n de la **serie triangular**
+- `T(n)` es el término `n` de la **serie triangular**
 - `P(n+1)` es el término (n+1) de los **números primos**
 
 ---
@@ -37,24 +37,26 @@ cd Frontend-challenge
 Este proyecto requiere:
 
 Node.js ≥ 18
+
 npm ≥ 9
 
-Verifica tu instalación con:
+Verifica tu instalación:
+
 
 node -v
 npm -v
-Si no los tienes, puedes descargar Node.js desde 👉 https://nodejs.org
+Si no los tienes, puedes descargarlos desde 👉 https://nodejs.org
 
 3. Instalar dependencias
-npm install
 
+npm install
 4. Ejecutar el proyecto localmente
 
 npm start
-Esto abrirá automáticamente la aplicación en tu navegador por defecto en:
+Esto abrirá automáticamente la aplicación en tu navegador:
+
 
 http://localhost:3000
-
 5. Ejecutar pruebas unitarias
 
 npm test
@@ -75,15 +77,10 @@ frontend-challenge/
 │
 ├── package.json
 └── README.md
-
 🧪 Tecnología utilizada
 Tecnología	Rol
 React	Librería para UI
 JavaScript	Lenguaje principal
 Node.js	Entorno de ejecución (runtime)
 Jest	Testing (pruebas unitarias)
-
-📧 Entrega
-Este proyecto ha sido desarrollado como parte de una entrevista técnica.
-Puede ser instalado y ejecutado por cualquier evaluador con Node.js en su entorno.
 
