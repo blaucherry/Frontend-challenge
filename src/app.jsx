@@ -6,16 +6,28 @@ export default function App() {
   const { status, result, error, compute } = useSeries()
 
   return (
-    <main style={{ padding: 16, maxWidth: 560, margin: '0 auto', fontFamily: 'system-ui, sans-serif' }}>
-      <h1 style={{ marginBottom: 6 }}>Calculadora de Serie Compuesta</h1>
-      <p style={{ marginTop: 0 }}>
+    <main
+      style={{
+        padding: 24,
+        maxWidth: 640,
+        margin: '0 auto',
+        fontFamily: 'system-ui, sans-serif',
+        lineHeight: 1.6
+      }}
+    >
+      <h1 style={{ marginBottom: 4, fontSize: '2rem', color: '#0a2e5d' }}>
+        Calculadora de Serie Compuesta
+      </h1>
+      <p style={{ fontSize: '1rem', marginTop: 0, color: '#333' }}>
         Fórmula:&nbsp;
-        <code>serie(n) = F(n+1) - 2·T(n) + P(n+1)</code>
+        <code style={{ background: '#f0f4ff', padding: '2px 4px', borderRadius: 4 }}>
+          serie(n) = F(n+1) - 2·T(n) + P(n+1)
+        </code>
       </p>
 
       <SeriesForm onSubmit={compute} />
 
-      <div style={{ marginTop: 12 }}>
+      <div style={{ marginTop: 20 }}>
         <SeriesResult status={status} result={result} error={error} />
       </div>
     </main>
