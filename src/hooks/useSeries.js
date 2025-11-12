@@ -1,4 +1,4 @@
-// Hook NO-visual: valida, gestiona estados y llama al core.
+// COMPONENTE NO VISUAL QUE CONTIENE LA LÓGICA DE CÁLCULO DE LA SERIE
 import { useState, useCallback } from 'react'
 import SeriesCalculator from '../core/series/SeriesCalculator'
 
