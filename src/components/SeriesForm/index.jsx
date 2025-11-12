@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-// Formulario visual: captura el valor y dispara onSubmit(value).
-// Incluye validación en el input para dar feedback inmediato.
 export default function SeriesForm({ onSubmit }) {
   const [value, setValue] = useState('')
 
@@ -15,7 +13,7 @@ export default function SeriesForm({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit(value) // la validación definitiva y cálculo suceden en el hook
+    onSubmit(value) 
   }
 
   return (

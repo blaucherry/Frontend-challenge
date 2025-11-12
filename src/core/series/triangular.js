@@ -1,6 +1,4 @@
-/**
- * Número triangular T(n) = 1 + 2 + ... + n
- */
+
 export default class Triangular {
   getTriangular(n) {
     if (n === 0) return 0

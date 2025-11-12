@@ -1,5 +1,4 @@
-// Componente visual: SOLO muestra estados y resultado.
-// No hace cálculos.
+// COMPONENTE VISUAL DONDE SE MUESTRA EL RESULTADO
 export default function SeriesResult({ status, result, error }) {
   if (status === 'idle') {
     return <p style={styles.muted}>Ingresa un valor y presiona “Calcular”.</p>

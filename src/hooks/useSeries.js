@@ -5,25 +5,24 @@ import SeriesCalculator from '../core/series/SeriesCalculator'
 const calculator = new SeriesCalculator()
 
 export function useSeries() {
-  const [status, setStatus] = useState('idle')      // 'idle' | 'loading' | 'success' | 'error'
-  const [result, setResult] = useState(null)        // número final
-  const [error, setError] = useState(null)          // mensaje de error
+  const [status, setStatus] = useState('idle')      
+  const [result, setResult] = useState(null)        
+  const [error, setError] = useState(null)          
 
   const compute = useCallback((raw) => {
     try {
       setError(null)
       setResult(null)
 
-      // Validación temprana (string del input)
+      
       const s = String(raw).trim()
-      const onlyDigits = /^\d+$/.test(s)           // solo dígitos
+      const onlyDigits = /^\d+$/.test(s)           
       if (!onlyDigits) throw new Error('Ingresa solo enteros positivos')
       const n = parseInt(s, 10)
       if (!Number.isInteger(n) || n <= 0) throw new Error('Ingresa un entero mayor que 0')
 
       setStatus('loading')
 
-      // Cálculo (sincrónico). Si quisieras async, podrías envolver en un setTimeout/Promise.
       const value = calculator.calculate(n)
 
       setResult(value)

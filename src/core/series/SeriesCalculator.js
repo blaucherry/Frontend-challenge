@@ -1,10 +1,4 @@
-/**
- * Serie(n) = F(n+1) - 2 * T(n) + P(n+1)
- * - F: Fibonacci
- * - T: Triangular
- * - P: k-ésimo primo
- * Validamos: n entero > 0 y un límite alto (≈77) para evitar overflow en JS.
- */
+
 import Fibonacci from './fibonacci'
 import Triangular from './triangular'
 import Primo from './primo'
@@ -20,7 +14,7 @@ function ensureValidN(n) {
 
 export default class SeriesCalculator {
   constructor() {
-    // Instanciamos las clases auxiliares una sola vez
+
     this.fib = new Fibonacci()
     this.tri = new Triangular()
     this.prm = new Primo()
