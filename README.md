@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+<h1 align="center">Calculadora de Serie Compuesta 💙 💙</h1>
+<p align="center">Aplicación minimal para calcular una serie numérica con validación clara y respuesta inmediata.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Visión general 🔵
+La aplicación recibe un número natural `n` y entrega el valor de la serie definida a continuación. El enfoque es precisión, accesibilidad base y comunicación de estados.
 
-In the project directory, you can run:
+## Fórmula 📘
+serie(n) = fibonacci(n+1) − 2·triangular(n) + primo(n+1)
 
-### `npm start`
+**Definiciones operativas:**
+- `fibonacci(k)`: k-ésimo número de Fibonacci (F0=0, F1=1).
+- `triangular(n)`: suma 1..n.
+- `primo(k)`: k-ésimo número primo (2, 3, 5, 7…).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Flujo de uso 🧩
+1. Ingresar un **entero ≥ 0** en el campo `n`.  
+2. Seleccionar **Calcular**.  
+3. La interfaz valida la entrada y muestra el **resultado** o un **mensaje de error**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Estados de interfaz:** listo → validando/calculando → resultado | error.
 
-### `npm test`
+## Validaciones ✅
+- Solo números **enteros** (sin decimales).  
+- Solo valores **≥ 0**.  
+- En caso de incumplimiento, se informa el motivo y no se ejecuta el cálculo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Salida esperada 📊
+- Valor numérico de **`serie(n)`**.  
+- Mensajería breve y directa para errores de entrada.
 
-### `npm run build`
+## Tabla oráculo (n = 0..9) 🔷
+Complete la tabla y utilícela como referencia en pruebas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| n | fibonacci(n+1) | triangular(n) | primo(n+1) | **serie(n)** = f(n+1) − 2·t(n) + p(n+1) |
+|---:|---------------:|--------------:|-----------:|----------------------------------------:|
+| 0 | 1  | 0  | 2  | **3**  |
+| 1 | 1  | 1  | 3  | **2**  |
+| 2 | 2  | 3  | 5  | **1**  |
+| 3 | 3  | 6  | 7  | **−2** |
+| 4 | 5  | 10 | 11 | **−4** |
+| 5 | 8  | 15 | 13 | **−9** |
+| 6 | 13 | 21 | 17 | **−12**|
+| 7 | 21 | 28 | 19 | **−16**|
+| 8 | 34 | 36 | 23 | **−15**|
+| 9 | 55 | 45 | 29 | **−6** |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Alcance 📘
+- No persiste datos ni realiza llamadas externas.  
+- Centrado en claridad del cálculo, validación de entrada y estados visibles.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Nota de precisión 🔹
+`primo(k)` se interpreta como **k-ésimo número primo**. Se documenta para evitar ambigüedades durante la revisión.
