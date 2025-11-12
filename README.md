@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h1 align="center">Calculadora de Serie Compuesta 💙 💙</h1>
+=======
+<h1 align="center">Calculadora de Serie Compuesta  💙</h1>
+>>>>>>> 923391f32de75eabc89e648776f8ecfd38f57841
 <p align="center">Aplicación minimal para calcular una serie numérica con validación clara y respuesta inmediata.</p>
 
 ---
