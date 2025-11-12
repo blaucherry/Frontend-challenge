@@ -47,6 +47,6 @@ npm start
 # Abre en tu navegador:
 # http://localhost:3000
 
-# (Opcional) Ejecuta las pruebas unitarias
+# Ejecuta las pruebas unitarias
 npm test
 ```
