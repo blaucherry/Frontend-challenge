@@ -50,18 +50,3 @@ npm start
 # (Opcional) Ejecuta las pruebas unitarias
 npm test
 ```
-
-🧠 Estructura del proyecto 🧠
-frontend-challenge/
-│
-├── public/               # index.html base
-├── src/
-│   ├── components/       # Componentes visuales (formulario, resultado)
-│   ├── core/series/      # Lógica matemática (Fibonacci, Triangular, Primo)
-│   ├── hooks/            # Hook useSeries (gestión de estado)
-│   ├── test/             # Pruebas unitarias
-│   ├── App.jsx           # Orquestador principal
-│   └── index.js          # Punto de entrada
-│
-├── package.json
-└── README.md
