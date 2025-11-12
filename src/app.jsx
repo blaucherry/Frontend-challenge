@@ -7,7 +7,6 @@ export default function App() {
 
   return (
     <div style={styles.container}>
-      {/* Línea azul superior decorativa */}
       <div style={styles.line} />
 
       <header style={styles.header}>
@@ -22,12 +21,15 @@ export default function App() {
         <SeriesResult status={status} result={result} error={error} />
       </main>
 
-      {/* Línea azul inferior decorativa */}
-      <div style={{ ...styles.line, marginTop: 40 }} />
+      <div style={styles.line} />
 
-      {/* Pie de página opcional */}
       <footer style={styles.footer}>
-        <small>© 2025 - Vianey Alcantar | Desafío técnico</small>
+        <img
+          src="/cinnamoroll.png" // Asegúrate que este archivo esté en la carpeta public/
+          alt="Cinnamoroll"
+          style={styles.footerImg}
+        />
+        <span>© 2025 – Vianey Alcantar | Desafío técnico</span>
       </footer>
     </div>
   )
@@ -35,40 +37,48 @@ export default function App() {
 
 const styles = {
   container: {
-    backgroundColor: '#e8f1fc',  
+    backgroundColor: '#e8f1fc',
     minHeight: '100vh',
     padding: '30px',
-    fontFamily: 'system-ui, sans-serif'
-  },
-  line: {
-    height: 6,
-    backgroundColor: '#b3d9ff',
-    borderRadius: 2,
-    marginBottom: 20
+    fontFamily: 'system-ui, sans-serif',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
   },
   header: {
-    marginBottom: 20
+    marginBottom: '20px'
   },
   title: {
-    fontSize: 26,
+    fontSize: '26px',
     margin: 0,
-    color: '#113264',
+    color: '#113264'
   },
   subtitle: {
-    marginTop: 6,
-    fontSize: 16,
+    marginTop: '6px',
+    fontSize: '16px',
     color: '#1c3f5f'
   },
   main: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 20
+    gap: '20px'
+  },
+  line: {
+    height: '5px',
+    backgroundColor: '#a3ccf5',
+    margin: '10px 0',
+    borderRadius: '2px'
   },
   footer: {
-    marginTop: 40,
     textAlign: 'center',
-    color: '#444',
-    fontSize: 12
+    marginTop: '30px',
+    color: '#333',
+    fontSize: '14px'
+  },
+  footerImg: {
+    height: 30,
+    marginRight: 8,
+    verticalAlign: 'middle'
   }
 }
