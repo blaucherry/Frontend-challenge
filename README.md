@@ -1,59 +1,89 @@
-<<<<<<< HEAD
-<h1 align="center">Calculadora de Serie Compuesta 💙 💙</h1>
-=======
-<h1 align="center">Calculadora de Serie Compuesta  💙</h1>
->>>>>>> 923391f32de75eabc89e648776f8ecfd38f57841
-<p align="center">Aplicación minimal para calcular una serie numérica con validación clara y respuesta inmediata.</p>
+# 📘 Calculadora de Serie Compuesta
+
+**Una aplicación web para calcular el valor de una serie matemática especial usando Fibonacci, números triangulares y primos.**  
+Esta herramienta permite ingresar un número `n` para calcular el resultado de la fórmula:
+
+serie(n) = F(n+1) - 2·T(n) + P(n+1)
+
+
+Donde:
+- `F(n+1)` es el término (n+1) de la **sucesión de Fibonacci**
+- `T(n)` es el término n de la **serie triangular**
+- `P(n+1)` es el término (n+1) de los **números primos**
 
 ---
 
-## Visión general 🔵
-La aplicación recibe un número natural `n` y entrega el valor de la serie definida a continuación. El enfoque es precisión, accesibilidad base y comunicación de estados.
+## ✨ Características
 
-## Fórmula 📘
-serie(n) = fibonacci(n+1) − 2·triangular(n) + primo(n+1)
+- ✔️ Interfaz sencilla e intuitiva
+- 🔢 Validación de entrada para aceptar enteros positivos, negativos y cero
+- ⚙️ Cálculo de valores usando una clase separada (`SeriesCalculator`)
+- 🧪 Pruebas unitarias para verificar la lógica de la serie
+- ⚛️ Componentes React independientes y reutilizables
+- 🎨 Estilizado básico con colores azulados y centrado visual limpio
 
-**Definiciones operativas:**
-- `fibonacci(k)`: k-ésimo número de Fibonacci (F0=0, F1=1).
-- `triangular(n)`: suma 1..n.
-- `primo(k)`: k-ésimo número primo (2, 3, 5, 7…).
+---
 
-## Flujo de uso 🧩
-1. Ingresar un **entero ≥ 0** en el campo `n`.  
-2. Seleccionar **Calcular**.  
-3. La interfaz valida la entrada y muestra el **resultado** o un **mensaje de error**.
+## 📦 Instalación y ejecución del proyecto
 
-**Estados de interfaz:** listo → validando/calculando → resultado | error.
+Sigue estos pasos para instalar el proyecto en cualquier máquina:
 
-## Validaciones ✅
-- Solo números **enteros** (sin decimales).  
-- Solo valores **≥ 0**.  
-- En caso de incumplimiento, se informa el motivo y no se ejecuta el cálculo.
+### 1. Clonar el repositorio
 
-## Salida esperada 📊
-- Valor numérico de **`serie(n)`**.  
-- Mensajería breve y directa para errores de entrada.
+```bash
+git clone https://github.com/blaucherry/Frontend-challenge.git
+cd Frontend-challenge
+2. Verificar que tienes Node.js y npm instalados
+Este proyecto requiere:
 
-## Tabla oráculo (n = 0..9) 🔷
-Complete la tabla y utilícela como referencia en pruebas.
+Node.js ≥ 18
+npm ≥ 9
 
-| n | fibonacci(n+1) | triangular(n) | primo(n+1) | **serie(n)** = f(n+1) − 2·t(n) + p(n+1) |
-|---:|---------------:|--------------:|-----------:|----------------------------------------:|
-| 0 | 1  | 0  | 2  | **3**  |
-| 1 | 1  | 1  | 3  | **2**  |
-| 2 | 2  | 3  | 5  | **1**  |
-| 3 | 3  | 6  | 7  | **−2** |
-| 4 | 5  | 10 | 11 | **−4** |
-| 5 | 8  | 15 | 13 | **−9** |
-| 6 | 13 | 21 | 17 | **−12**|
-| 7 | 21 | 28 | 19 | **−16**|
-| 8 | 34 | 36 | 23 | **−15**|
-| 9 | 55 | 45 | 29 | **−6** |
+Verifica tu instalación con:
 
+node -v
+npm -v
+Si no los tienes, puedes descargar Node.js desde 👉 https://nodejs.org
 
-## Alcance 📘
-- No persiste datos ni realiza llamadas externas.  
-- Centrado en claridad del cálculo, validación de entrada y estados visibles.
+3. Instalar dependencias
+npm install
 
-## Nota de precisión 🔹
-`primo(k)` se interpreta como **k-ésimo número primo**. Se documenta para evitar ambigüedades durante la revisión.
+4. Ejecutar el proyecto localmente
+
+npm start
+Esto abrirá automáticamente la aplicación en tu navegador por defecto en:
+
+http://localhost:3000
+
+5. Ejecutar pruebas unitarias
+
+npm test
+Esto ejecutará las pruebas de la clase SeriesCalculator usando Jest.
+
+🧠 Estructura del proyecto
+
+frontend-challenge/
+│
+├── public/               # index.html base
+├── src/
+│   ├── components/       # Componentes visuales (formulario, resultado)
+│   ├── core/series/      # Lógica matemática (Fibonacci, Triangular, Primo)
+│   ├── hooks/            # Hook useSeries (gestión de estado)
+│   ├── test/             # Pruebas unitarias
+│   ├── App.jsx           # Orquestador principal
+│   └── index.js          # Punto de entrada
+│
+├── package.json
+└── README.md
+
+🧪 Tecnología utilizada
+Tecnología	Rol
+React	Librería para UI
+JavaScript	Lenguaje principal
+Node.js	Entorno de ejecución (runtime)
+Jest	Testing (pruebas unitarias)
+
+📧 Entrega
+Este proyecto ha sido desarrollado como parte de una entrevista técnica.
+Puede ser instalado y ejecutado por cualquier evaluador con Node.js en su entorno.
+
