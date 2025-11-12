@@ -4,14 +4,15 @@ export default function SeriesForm({ onSubmit }) {
   const [value, setValue] = useState('')
 
   // Validación: solo acepta enteros positivos
-  const isValid = /^\d+$/.test(value) && parseInt(value || '0', 10) > 0
+  const isValid = /^-?\d+$/.test(value)
+
 
   const helper =
     value === ''
-      ? 'Ingresa un entero mayor que 0'
+      ? 'Ingresa un Entero'
       : isValid
-      ? 'Listo para calcular'
-      : 'Solo enteros positivos (sin decimales ni signos)'
+      ? 'Si es Numero Entero Valido'
+      : 'Solo se permiten Enteros'
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,7 +22,10 @@ export default function SeriesForm({ onSubmit }) {
   return (
     <form onSubmit={handleSubmit} style={styles.form} noValidate>
       <label style={styles.label}>
-        <span style={styles.labelText}>Número <strong>n</strong> (entero &gt; 0)</span>
+        <span style={styles.labelText}>
+  Número <strong>n</strong> (entero)
+</span>
+
         <input
           style={{
             ...styles.input,
