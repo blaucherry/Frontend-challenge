@@ -6,30 +6,46 @@ export default function App() {
   const { status, result, error, compute } = useSeries()
 
   return (
-    <main
-      style={{
-        padding: 24,
-        maxWidth: 640,
-        margin: '0 auto',
-        fontFamily: 'system-ui, sans-serif',
-        lineHeight: 1.6
-      }}
-    >
-      <h1 style={{ marginBottom: 4, fontSize: '2rem', color: '#0a2e5d' }}>
-        Calculadora de Serie Compuesta
-      </h1>
-      <p style={{ fontSize: '1rem', marginTop: 0, color: '#333' }}>
-        Fórmula:&nbsp;
-        <code style={{ background: '#f0f4ff', padding: '2px 4px', borderRadius: 4 }}>
-          serie(n) = F(n+1) - 2·T(n) + P(n+1)
-        </code>
-      </p>
+    <div style={styles.container}>
+      <header style={styles.header}>
+        <h1 style={styles.title}>Calculadora de Serie Compuesta</h1>
+        <p style={styles.subtitle}>
+          Fórmula: <code>serie(n) = F(n+1) - 2·T(n) + P(n+1)</code>
+        </p>
+      </header>
 
-      <SeriesForm onSubmit={compute} />
-
-      <div style={{ marginTop: 20 }}>
+      <main style={styles.main}>
+        <SeriesForm onSubmit={compute} />
         <SeriesResult status={status} result={result} error={error} />
-      </div>
-    </main>
+      </main>
+    </div>
   )
+}
+
+const styles = {
+  container: {
+    backgroundColor: '#e8f1fc',  
+    minHeight: '100vh',
+    padding: '30px',
+    fontFamily: 'system-ui, sans-serif'
+  },
+  header: {
+    marginBottom: '20px'
+  },
+  title: {
+    fontSize: '26px',
+    margin: 0,
+    color: '#113264',
+  },
+  subtitle: {
+    marginTop: '6px',
+    fontSize: '16px',
+    color: '#1c3f5f'
+  },
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',  
+    gap: '20px'
+  }
 }
