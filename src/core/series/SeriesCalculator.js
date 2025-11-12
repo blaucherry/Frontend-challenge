@@ -7,7 +7,7 @@
  */
 import Fibonacci from './fibonacci'
 import Triangular from './triangular'
-import Primo from './prime'
+import Primo from './primo'
 
 function ensureValidN(n) {
   if (!Number.isInteger(n) || n <= 0) {
