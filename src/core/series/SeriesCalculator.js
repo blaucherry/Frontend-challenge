@@ -1,29 +1,36 @@
-import Fibonacci from './fibonacci.js';
-import Triangular from './triangular.js';
-import Primo from './primo.js';
 /**
- * Clase que calcula la serie:
- * S = Fibonacci(n+1) - (2 * Triangular(n)) + Primo(n+1)
+ * Serie(n) = F(n+1) - 2 * T(n) + P(n+1)
+ * - F: Fibonacci
+ * - T: Triangular
+ * - P: k-ésimo primo
+ * Validamos: n entero > 0 y un límite alto (≈77) para evitar overflow en JS.
  */
-class SeriesCalculator {
+import Fibonacci from './fibonacci'
+import Triangular from './triangular'
+import Primo from './prime'
 
-    /**
-     * Método principal que calcula el valor de la serie para un 'n' dado.
-     */
-    calculate(n) {
-        
-        // 1. Calcular el valor de Fibonacci para (n+1)
-        const fibValue = Fibonacci().getFibonacci(n);
-        
-        // 2. Calcular el valor Triangular para (n)
-        const triValue = Triangular().getTriangular(n);
+function ensureValidN(n) {
+  if (!Number.isInteger(n) || n <= 0) {
+    throw new Error('n debe ser un entero mayor que 0')
+  }
+  if (n > 77) {
+    throw new Error('n es muy grande para un cálculo preciso (use n ≤ 77)')
+  }
+}
 
-        // 3. Calcular el valor Primo para (n+1)
-        const primeValue = Primo().getPrimo(n);
+export default class SeriesCalculator {
+  constructor() {
+    // Instanciamos las clases auxiliares una sola vez
+    this.fib = new Fibonacci()
+    this.tri = new Triangular()
+    this.prm = new Primo()
+  }
 
-        // 4. Aplicar la fórmula y devolver el resultado
-        return fibValue - (2 * triValue) + primeValue;
-    }
-
-
+  calculate(n) {
+    ensureValidN(n)
+    const f = this.fib.getFibonacci(n + 1) // F(n+1)
+    const t = this.tri.getTriangular(n)    // T(n)
+    const p = this.prm.getPrimoK(n + 1)    // P(n+1)
+    return f - 2 * t + p
+  }
 }
