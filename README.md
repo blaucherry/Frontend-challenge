@@ -51,8 +51,7 @@ npm start
 npm test
 ```
 
-🧠 Estructura del proyecto
-
+🧠 Estructura del proyecto 🧠
 frontend-challenge/
 │
 ├── public/               # index.html base
@@ -66,10 +65,3 @@ frontend-challenge/
 │
 ├── package.json
 └── README.md
-🧪 Tecnología utilizada
-Tecnología	Rol
-React	Librería para UI
-JavaScript	Lenguaje principal
-Node.js	Entorno de ejecución (runtime)
-Jest	Testing (pruebas unitarias)
-
